@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Barlow:ital,wght@0,300;0,400;0,700;1,300&family=Barlow+Condensed:wght@400;700&display=swap");
+
+/* CSS variables for quick color/typography tweaks */
+:root {
+  --text-on-dark: #dbeafe; /* light-ish text for hero */
+  --muted: rgba(255, 255, 255, 0.6);
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-strong: rgba(255, 255, 255, 0.1);
+}
+
+@layer utilities {
+  .font-condensed {
+    font-family: "Barlow Condensed", sans-serif;
+    letter-spacing: 0.2em;
+  }
+
+  .bg-crew {
+    background: url("/assets/shared/background-crew-desktop.jpg") center/cover
+      no-repeat;
+  }
+  @media (max-width: 1024px) {
+    .bg-crew {
+      background-image: url("/assets/shared/background-crew-tablet.jpg");
+    }
+  }
+  @media (max-width: 640px) {
+    .bg-crew {
+      background-image: url("/assets/shared/background-crew-mobile.jpg");
+    }
+  }
+}
+
+/* Utility font classes */
+.font-bellefair {
+  font-family: "Bellefair", serif;
+}
+.font-barlow {
+  font-family: "Barlow", sans-serif;
+}
+.font-condensed {
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 0.18em;
+}
+
+/* Tweak link focus outlines for accessibility */
+a:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+}
+
+/* Thin divider gradient (desktop) */
+.nav-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Fine-tune mobile overlay panel shadow */
+.mobile-panel-shadow {
+  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.6);
+}
