@@ -7,7 +7,7 @@ const Hero = () => {
       className="
         relative min-h-2/3
         bg-no-repeat bg-cover bg-center
-        flex flex-col items-center justify-between
+        flex flex-col lg:flex-row items-center justify-between
         md:justify-center
         px-6 md:px-12 xl:px-34
         text-[var(--text-on-dark)]
